@@ -1,1 +1,1 @@
-个人博客： https://towelong.github.io
+个人博客： https://towelong.github.io/blog
