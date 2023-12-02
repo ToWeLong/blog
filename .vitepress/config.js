@@ -7,13 +7,13 @@ const pageSize = 10
 
 export default defineConfig({
     title: 'welong',
-    base: '/',
+    base: '/blog/',
     cacheDir: './node_modules/vitepress_cache',
     description: 'towelong,博客,blog,golang学习,Python学习',
     ignoreDeadLinks: true,
     themeConfig: {
         posts: await getPosts(pageSize),
-        website: 'https://towelong.github.io', //copyright link
+        website: 'https://towelong.github.io/blog', //copyright link
         // 评论的仓库地址
         comment: {
             repo: 'towelong/blog',
