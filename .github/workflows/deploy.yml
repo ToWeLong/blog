@@ -1,4 +1,3 @@
-```
 name: Deploy
 # 触发方式：每次代码push到master分支时触发
 on:
