@@ -8,7 +8,7 @@ const pageSize = 10
 export default defineConfig({
     title: 'welong',
     titleTemplate: ':title - WeLong的博客',
-    base: '/',
+    base: '/blog/',
     cacheDir: './node_modules/vitepress_cache',
     description: 'towelong,博客,blog,golang学习,Python学习',
     ignoreDeadLinks: true,
