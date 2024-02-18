@@ -21,14 +21,19 @@
   </ClientOnly>
 </template>
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { initTags } from '../functions'
-let url = location.href.split('?')[1]
-let params = new URLSearchParams(url)
+const selectTag = ref<string | null>()
 const { theme } = useData()
 const data = computed(() => initTags(theme.value.posts))
-let selectTag = ref(params.get('tag') ? params.get('tag') : '')
+
+onMounted(() => {
+  let url = location.href.split('?')[1]
+  let params = new URLSearchParams(url)
+  selectTag.value = params.get('tag') ? params.get('tag') : ''
+})
+
 const toggleTag = (tag: string) => {
   selectTag.value = tag
 }
