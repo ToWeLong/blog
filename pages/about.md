@@ -1,10 +1,10 @@
 ---
 page: true
-title: About
+title: 关于我
 description: 关于我
 aside: false
 ---
 
-# about me
+# 关于我
 
 coming soon...
