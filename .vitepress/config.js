@@ -4,14 +4,15 @@ import { getPosts } from './theme/serverUtils'
 
 //每页的文章数量
 const pageSize = 10
+const description =
+    '小付同学的开发日常，towelong的博客。致力于分享编程知识和技术实践，无论你是编程新手还是资深开发者，都能在这里找到启发和收获。在这个blog中，你可以深入了解golang和Python的学习资源，以及小付同学在开发过程中的心得体验和实用技巧。'
 
 export default defineConfig({
     title: '小付同学的开发日常',
     titleTemplate: ':title - 小付同学的开发日常',
     base: '/',
     cacheDir: './node_modules/vitepress_cache',
-    description:
-        '小付同学的开发日常 - towelong的博客。这里是探索golang学习和Python学习的理想之地。我们的博客致力于分享付同学的编程知识和技术实践，无论你是编程新手还是资深开发者，都能在这里找到启发和收获。在这个blog中，你可以深入了解golang和Python的学习资源，以及小付同学在开发过程中的心得体验和实用技巧。',
+    description: description,
     metaChunks: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     ignoreDeadLinks: true,
     head: [
@@ -63,8 +64,11 @@ export default defineConfig({
         const head = []
 
         head.push(['meta', { property: 'og:title', content: pageData.frontmatter.title }])
-        head.push(['meta', { property: 'og:description', content: pageData.frontmatter.description }])
-
+        if (pageData.frontmatter.description) {
+            head.push(['meta', { property: 'og:description', content: pageData.frontmatter.description }])
+        } else {
+            head.push(['meta', { property: 'og:description', content: description }])
+        }
         return head
     }
 })
