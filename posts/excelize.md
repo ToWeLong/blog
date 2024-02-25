@@ -2,7 +2,7 @@
 date: 2024-02-18
 title: 讲一讲Golang中excelize的几种用法
 tags:
-- golang
+    - golang
 description: excelize在最近工作中用到的比较多，也是记录一下常见的几种用法以及使用场景，也方便以后用的频率少的时候来此查阅。
 ---
 
@@ -13,6 +13,7 @@ description: excelize在最近工作中用到的比较多，也是记录一下�
 ## 导出
 
 ### 1. 直接生成excel文件
+
 > 应用场景：常用于脚本读取 DB（database）中的数据导出成 excel 文件。
 
 ```go
@@ -45,6 +46,7 @@ func main() {
 ```
 
 ### 2. 文件流导出
+
 > 应用场景：常用于 HTTP API 接口读取 DB（database）中的数据导出成 excel 文件。
 
 ```go
@@ -74,6 +76,7 @@ func main() {
 ```
 
 ### 3. 文件转Base64导出
+
 > 应用场景：常用于 HTTP API 接口读取 DB（database）中的数据导出成 excel 文件。
 
 ```go
@@ -104,6 +107,7 @@ func main() {
 ## 导入
 
 ### 1. 直接读取本地文件
+
 > 应用场景：常用于脚本读取本地文件导入数据到 DB（database） 中。
 
 ```go
@@ -126,8 +130,8 @@ func main() {
 }
 ```
 
-
 ### 2. 从io数据流中读取
+
 > 应用场景：从 HTTP form-data 请求中读取 excel 文件。
 
 ```go
@@ -167,9 +171,12 @@ func main() {
 }
 ```
 
+<center>
+	<p>欢迎关注我的公众号: <span style="font-weight: 600;color: blue;">小付同学的开发日常</span>，原创技术文章第一时间推送。</p>
+    <img src="https://pic.ziyuan.wang/user/guest/2024/01/傅1_1932a233b5837.jpeg" style="width: 300px;">
+</center>
 
 # 参考
+
 [^1]: excelize: https://github.com/qax-os/excelize
 [^2]: easyexcel: https://github.com/alibaba/easyexcel
-
-
