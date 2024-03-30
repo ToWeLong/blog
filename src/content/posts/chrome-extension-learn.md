@@ -9,7 +9,7 @@ categories: ['Chrome Extension']
 
 一个 `Chrome Extension`[^1]包含如下内容
 
-![An image](/public/Xnip2023-12-10_19-50-20.png)
+![示例图](/Xnip2023-12-10_19-50-20.png)
 
 
 ## manifest.json
@@ -52,7 +52,7 @@ categories: ['Chrome Extension']
 
 ## 通信
 
-![An image](/public/Xnip2023-12-10_19-52-13.png)
+![示例图](/Xnip2023-12-10_19-52-13.png)
 通信需要双方合作才能通信，什么意思呢，在插件中要是想通信，那么一方必须是发送而另一方必须接收，也就是说两者缺一不可。
 
 
