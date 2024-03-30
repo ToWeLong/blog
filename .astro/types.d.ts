@@ -126,40 +126,40 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"posts": {
-"The Unbearable Lightness of Being.md": {
-	id: "The Unbearable Lightness of Being.md";
-  slug: "the-unbearable-lightness-of-being";
+"chrome-extension-learn.md": {
+	id: "chrome-extension-learn.md";
+  slug: "chrome-extension-learn";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "excelize.md": {
 	id: "excelize.md";
   slug: "excelize";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
-"容忍与自由.md": {
-	id: "容忍与自由.md";
-  slug: "容忍与自由";
+"go-private-modules.md": {
+	id: "go-private-modules.md";
+  slug: "go-private-modules";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
-"故乡.md": {
-	id: "故乡.md";
-  slug: "故乡";
+"pandoraNext.md": {
+	id: "pandoraNext.md";
+  slug: "pandoranext";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
-"羅生門.md": {
-	id: "羅生門.md";
-  slug: "羅生門";
+"write-blog-reson.md": {
+	id: "write-blog-reson.md";
+  slug: "write-blog-reson";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 };
 
@@ -171,5 +171,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = never;
+	export type ContentConfig = typeof import("../src/content/config.js");
 }
