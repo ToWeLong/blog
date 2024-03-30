@@ -1,27 +1,10 @@
 {
-    "compilerOptions": {
-        "target": "esnext",
-        "module": "esnext",
-        "moduleResolution": "node",
-        "strict": true,
-        "jsx": "preserve",
-        "sourceMap": true,
-        "resolveJsonModule": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "lib": ["ESNext", "DOM"],
-        "types": [],
-        "baseUrl": "./",
-        "paths": {
-            "@/*": ["src/*"]
-        }
+  "extends": "astro/tsconfigs/strict",
+  "include": ["src/types/*.d.ts", "src/**/*.astro", "src/**/*.ts"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"]
     },
-    "include": [
-        ".vitepress/**/*.ts",
-        ".vitepress/**/*.d.ts",
-        ".vitepress/**/*.tsx",
-        ".vitepress/**/*.vue",
-        "shims-vue.d.ts"
-    ],
-    "exclude": ["dist", "node_modules"]
+  },
 }
