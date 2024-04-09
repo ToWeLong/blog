@@ -147,6 +147,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"oauth2.md": {
+	id: "oauth2.md";
+  slug: "oauth2";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "pandoraNext.md": {
 	id: "pandoraNext.md";
   slug: "pandoranext";
