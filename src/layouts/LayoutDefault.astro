@@ -34,7 +34,11 @@ const optimizedImage = new URL(image?.src ?? '/placeholder.png', Astro.url).toSt
   <head>
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <script is:inline async src="https://umami.xiaozi.cc/script.js" data-website-id="b19e7f1a-f9af-473a-ad36-7153787a1244"></script>
+    <script
+      is:inline
+      async
+      src="https://umami.xiaozi.cc/script.js"
+      data-website-id="b19e7f1a-f9af-473a-ad36-7153787a1244"></script>
     <SEO
       charset="utf-8"
       title={title}
@@ -42,6 +46,10 @@ const optimizedImage = new URL(image?.src ?? '/placeholder.png', Astro.url).toSt
       extend={{
         link: [{ rel: 'icon', href: '/favicon.ico' }],
         meta: [
+          {
+            name: 'keyword',
+            content: '小付同学的开发日常, Go语言, Golang开发, 独立开发, 独立开发者'
+          },
           { name: 'twitter:image:src', content: optimizedImage },
           { name: 'twitter:image:alt', content: desc },
           { name: 'twitter:creator', content: header.twitter },
